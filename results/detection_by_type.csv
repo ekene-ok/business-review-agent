@@ -1,0 +1,5 @@
+kind,caught,scenarios,detection_rate
+drop,15,24,0.625
+duplicate_rows,6,6,1.0
+missing_rows,6,6,1.0
+spike,10,12,0.833

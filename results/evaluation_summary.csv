@@ -1,0 +1,9 @@
+measure,value
+Scenarios,60
+Problems injected,48
+Problems caught,37
+Detection rate (recall),0.771
+Precision (correct flags / all flags),0.841
+False flags on clean weeks,2
+Drafts passing number verification,60 of 60
+Data problems marked provisional,12 of 12

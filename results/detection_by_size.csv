@@ -1,0 +1,5 @@
+size,caught,scenarios,detection_rate
+10% to 20%,1,8,0.125
+20% to 30%,5,9,0.556
+30% to 50%,11,11,1.0
+Over 50%,8,8,1.0
