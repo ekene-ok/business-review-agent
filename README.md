@@ -58,6 +58,13 @@ I chose 3.5 because a weekly review that cries wolf gets ignored. Leaders can lo
 
 **What improved it.** The first version compared each week with a plain 12-week median and had 51% precision. Steady growth made recent weeks look unusual, and 12 points gave unstable noise estimates. Fitting each segment's trend, pooling noise across segments and correcting for forecast uncertainty raised precision to 84% at similar recall.
 
+## What it's worth
+
+- **It says where a change came from, not just that it happened.** In the [sample week](sample_output/weekly_review_example.md), company-wide churned ARR rose 18%. A dashboard shows the +18%; the agent traced all of it to one segment (SMB, North America, nearly double its expected level) and turned that into a specific follow-up: pull this week's churned accounts and check whether one large account or a pattern drove it
+- **It stays quiet when nothing is wrong.** Two false flags across 12 clean weeks, so a flag is worth a leader's attention
+- **It removes the main barrier to using AI for reporting.** None of the 60 drafts contained a number the analysis did not produce, so a leader never has to wonder whether a figure was invented
+- **Time back (planning estimate, to measure in practice):** if a manual weekly review takes an analyst about 3 hours and checking the agent's draft takes about 30 minutes, that is roughly 130 hours a year for each weekly review an analyst owns
+
 ## Safeguards
 
 - **No untraceable numbers:** the verifier rejects any figure the analysis did not produce, including rounding changes. Tests confirm that a model which invents a number is rejected and that the template is used instead
