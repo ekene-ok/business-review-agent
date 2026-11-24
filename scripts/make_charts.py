@@ -17,9 +17,9 @@ fig, ax = b.chart(height=4.3, label_in=0.0, xaxis=True, right_in=0.3)
 b.vbar(ax, d["size"].tolist(), (d.detection_rate * 100).tolist(),
        {i for i, s_ in enumerate(d["size"]) if s_ in ("30% to 50%", "Over 50%")},
        [f"{c} of {n}" for c, n in zip(d.caught, d.scenarios)], HL, ymax=100)
-ax.set_xlabel("Size of the injected change", color=b.MUTED, fontsize=9.5)
+ax.set_xlabel("Size of the planted drop or spike", color=b.MUTED, fontsize=9.5)
 b.titles(fig, "The agent catches every problem of 30% or more",
-         "Injected metric drops and churn spikes flagged. Smaller changes sit inside weekly noise")
+         "Test weeks with a planted problem that the agent flagged. Smaller changes look like normal noise")
 b.credit(fig, "Evaluation harness, 60 generated scenarios")
 b.save(fig, OUT / "01_detection_by_size.png")
 print("Chart saved to charts/")
